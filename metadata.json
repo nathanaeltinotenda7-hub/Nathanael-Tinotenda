@@ -1,0 +1,6 @@
+{
+  "name": "Connections",
+  "description": "A powerful communication platform blending the social connectivity of Facebook with the rich instant messaging and call features of WhatsApp, equipped with offline syncing, built-in Meta AI knowledge assistant, and a live owner-exclusive analytics dashboard.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

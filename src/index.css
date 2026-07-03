@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@700&family=Inter:wght@400;700&family=JetBrains+Mono:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-whatsapp-green-dark: #075e54;
+  --color-whatsapp-teal: #128c7e;
+  --color-whatsapp-lightgreen: #25d366;
+  --color-whatsapp-teal-bright: #00a884;
+  --color-whatsapp-blue-ticks: #53bdeb;
+  
+  --color-wa-bg-chat: #0b141a;
+  --color-wa-bg-panel: #111b21;
+  --color-wa-bg-header: #202c33;
+  --color-wa-bg-hover: #2a3942;
+  --color-wa-bubble-out: #005c4b;
+  --color-wa-bubble-in: #202c33;
+  --color-wa-text-primary: #e9edef;
+  --color-wa-text-secondary: #8696a0;
+}
+
+/* Custom font style utilities for the Status Broadcast feature */
+.font-status-sans {
+  font-family: "Inter", sans-serif;
+}
+
+.font-status-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-status-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.font-status-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-status-handwritten {
+  font-family: "Caveat", cursive;
+}
+
+/* Custom Scrollbar to look like a polished desktop/mobile app */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* WhatsApp Classic Doodle Background (Obsidian theme) */
+.whatsapp-chat-bg-doodle {
+  background-color: #0b141a;
+  background-image: radial-gradient(rgba(0, 168, 132, 0.08) 1.2px, transparent 1.2px), radial-gradient(rgba(0, 168, 132, 0.05) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Alternate solid wallpapers */
+.whatsapp-chat-bg-classic {
+  background-color: #090e11;
+  background-image: linear-gradient(135deg, #075e54 0%, #128c7e 100%);
+  background-blend-mode: overlay;
+  opacity: 0.95;
+}
+
+.whatsapp-chat-bg-solid {
+  background-color: #121b22;
+}
+
+/* Micro animations */
+@keyframes bubbleEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-bubble {
+  animation: bubbleEntrance 0.18s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
